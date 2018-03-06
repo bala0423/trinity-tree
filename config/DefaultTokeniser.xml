@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokenisation>
+<macro name="{Cletter}"><![CDATA[[A-ZÀÁÂÃÄÅÆÇÈÉÊËÌÍÎŽÏÐÑÒÓÔÕÖØÙÚÛÜÝÞΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩŒŠŸ]]]></macro> 
+<macro name="{Sletter}"><![CDATA[[a-zßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿαβγδεζηθικλμνξοπρςστυφχψωœšƒ]]]></macro>
+
+ 	<generalisation name="WORD"> 
+		<token name="C1UPPER"><![CDATA[{Cletter}{Sletter}+]]></token>
+		<token name="MIXED"><![CDATA[\w*(?:{Sletter}\w*{Cletter}|{Cletter}\w*{Sletter})\w*]]></token>				
+		<token name="ALLUPPER"><![CDATA[{Cletter}+]]></token>
+		<token name="ALLSMALL"><![CDATA[{Sletter}+]]></token>			
+		<token name="DIGIT"><![CDATA[[0-9]+]]></token>
+	</generalisation>
+	<generalisation name="NOWORD">	
+		<token name="COMMENT"><![CDATA[<!--(?:[^-]|-[^-]|--[^>])*-->]]></token>
+		<token name="SCRIPT"><![CDATA[<[Ss][Cc][Rr][Ii][Pp][Tt](?:.|\n)*?</[Ss][Cc][Rr][Ii][Pp][Tt]>]]></token>
+		<token name="STYLE"><![CDATA[<[Ss][Tt][Yy][Ll][Ee](?:.|\n)*?</[Ss][Tt][Yy][Ll][Ee]>]]></token>
+		
+		<token name="STARTENDHTMLTAG"><![CDATA[<[^/>]+/>]]></token>			
+		<token name="STARTHTMLTAG"><![CDATA[<[^!/][^>]+>]]></token>
+		<token name="ENDHTMLTAG"><![CDATA[</[^>]+>]]></token>		
+						
+		<token name="SPACE"><![CDATA[[\ \t\ \v]+]]></token>
+		<token name="NEWLINE"><![CDATA[[\r\n\f]+]]></token>
+		<token name="PUNCT"><![CDATA[[’‘—_\-\!¡"”“„¨#%&'´\(\)\*+,‚\./:;<=>@\[\]\\^–`{|}~\?¿­¦…¯]]]></token>
+		<token name="SPECIALCHARS"><![CDATA[[¢£¤¥§$£¨©ª«¬®¯°±²³´µ¶•¸¹º»¼½¾×÷ˆ˜–—€]]]></token>
+	</generalisation>
+
+ <!--	<generalisation name="SOMETHING">	
+		<token name="WORD"><![CDATA[\w+]]></token>		
+	</generalisation> -->
+</Tokenisation>

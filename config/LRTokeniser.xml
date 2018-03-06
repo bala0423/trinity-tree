@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokenisation>
+<macro name="{Cletter}"><![CDATA[[A-ZÀÁÂÃÄÅÆÇÈÉÊËÌÍÎŽÏÐÑÒÓÔÕÖØÙÚÛÜÝÞΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩŒŠŸ]]]></macro> 
+<macro name="{Sletter}"><![CDATA[[a-zßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿαβγδεζηθικλμνξοπρςστυφχψωœšƒ]]]></macro>
+
+	 <generalisation name="TEXT"> 
+		<token name="C1UPPER"><![CDATA[{Cletter}]]></token>
+		<token name="MIXED"><![CDATA[{Sletter}]]></token>				
+			
+	
+		<token name="DIGIT"><![CDATA[[0-9]]]></token>
+		<token name="SPACE"><![CDATA[[\ \t\ \v]]]></token>
+		<token name="NEWLINE"><![CDATA[[\r\n\f]]]></token>
+		<token name="PUNCT"><![CDATA[[—_\-\!¡"”“„¨\#\$£€%&'´\(\)\*\+,‚./:;<=>@\\^–`{|}~\?¿­¦…¯\[\]]]]></token>
+		<token name="SPECIALCHARS"><![CDATA[[œµ·°º¬¢³ª²‹›«©®»™½¼¾†ƒ§¶•¸’‘]]]></token>
+	</generalisation>
+</Tokenisation>

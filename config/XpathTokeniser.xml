@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokenisation>
+<macro name="{Word}"><![CDATA[[A-Za-z]]]></macro>
+
+	 <generalisation name="xpath"> 
+
+		<token name="INDEX"><![CDATA[(?=\[)[^\[\]](?=\])]]></token>
+
+		<!--		<token name="SEPARATOR"><![CDATA[\/+]]></token>
+		<token name="WORD"><![CDATA[{Word}+]]></token>
+		<token name="LABLE"><![CDATA[{Word}+:]]></token>
+		<token name="FUNCTION"><![CDATA[{Word}+\(.*\)]]></token>-->
+	</generalisation>
+</Tokenisation>
